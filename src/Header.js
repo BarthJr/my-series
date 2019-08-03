@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import {
   Navbar,
   NavbarBrand,
@@ -8,7 +8,7 @@ import {
   NavLink,
   NavbarToggler
 } from 'reactstrap'
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const [open, setOpen] = useState(false)
@@ -17,15 +17,17 @@ const Header = () => {
   }
   return (
     <Navbar color='ligth' light expand='md'>
-      <NavbarBrand tag={Link} to='/'> My Series </NavbarBrand>
-      <NavbarToggler onClick={toggle}/>
-      <Collapse isOpen={open} navbar>
-        <Nav className='ml-auto' navbar>
-          <NavItem>
-            <NavLink tag={Link} to='/genres'>Genres</NavLink>
-          </NavItem>
-        </Nav>
-      </Collapse>
+      <div className='container'>
+        <NavbarBrand tag={Link} to='/'> My Series </NavbarBrand>
+        <NavbarToggler onClick={toggle}/>
+        <Collapse isOpen={open} navbar>
+          <Nav className='ml-auto' navbar>
+            <NavItem>
+              <NavLink tag={Link} to='/genres'>Genres</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </div>
     </Navbar>
   )
 }
