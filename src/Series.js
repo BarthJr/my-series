@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
@@ -15,7 +15,7 @@ const Series = () => {
   const deleteSerie = id => {
     axios
       .delete('/api/series/' + id)
-      .then(res => {
+      .then(() => {
         const filtered = data.filter(item => item.id !== id)
         setData(filtered)
       })
@@ -28,7 +28,7 @@ const Series = () => {
         <td>{record.name}</td>
         <td>
           <button className='btn btn-danger' onClick={() => deleteSerie(record.id)}>Remove</button>
-          <Link to={'/series/'+ record.id} className='btn btn-warning'>Editar</Link>
+          <Link to={'/series/' + record.id} className='btn btn-warning'>Info</Link>
         </td>
       </tr>
     )
