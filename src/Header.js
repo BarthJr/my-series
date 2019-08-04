@@ -25,6 +25,9 @@ const Header = () => {
             <NavItem>
               <NavLink tag={Link} to='/genres'>Genres</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink tag={Link} to='/series'>Series</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </div>
