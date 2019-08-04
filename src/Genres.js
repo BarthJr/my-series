@@ -38,6 +38,7 @@ const Genres = () => {
     return (
       <div className='container'>
         <h1>Genres</h1>
+        <div><Link to='/genres/new' className='btn btn-primary'>New Genre</Link></div>
         <div className='alert alert-warning' role='alert'>
           you have no genres created
         </div>
