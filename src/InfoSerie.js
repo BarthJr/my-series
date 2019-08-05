@@ -54,7 +54,7 @@ const InfoSerie = ({ match }) => {
     })
   }
 
-  const seleciona = value => () => {
+  const select = value => () => {
     setForm({
       ...form,
       status: value
@@ -124,17 +124,17 @@ const InfoSerie = ({ match }) => {
             <div className='form-check'>
               <input className='form-check-input' type='radio' checked={form.status === 'WATCHED'} name='status'
                      id='watched' value='WATCHED'
-                     onChange={seleciona('WATCHED')}/>
+                     onChange={select('WATCHED')}/>
               <label className='form-check-label' htmlFor='watched'>
-                Assistido
+                Watched
               </label>
             </div>
             <div className='form-check'>
               <input className='form-check-input' type='radio' checked={form.status === 'TO_WATCH'} name='status'
                      id='toWatch' value='TO_WATCH'
-                     onChange={seleciona('TO_WATCH')}/>
+                     onChange={select('TO_WATCH')}/>
               <label className='form-check-label' htmlFor='toWatch'>
-                Para assistir
+                To Watch
               </label>
             </div>
             <button type='button' onClick={save} className='btn btn-primary'>Save</button>
